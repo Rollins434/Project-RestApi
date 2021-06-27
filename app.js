@@ -24,13 +24,13 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-
+//routes registered
 app.use(`${api}/products`, productsRoutes);
 app.use(`${api}/categories`, categoriesRoutes);
 
 
 
-
+//making connection with Mongo DB
 mongoose.connect(process.env.CONNECTION_STRING,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
